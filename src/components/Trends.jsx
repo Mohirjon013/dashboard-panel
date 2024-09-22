@@ -26,7 +26,7 @@ function Trends() {
         {
             id:5,
             title:"Resolution within SLA",
-            nums:"3h 8m"
+            nums:"94%"
         }
     ]
   return (

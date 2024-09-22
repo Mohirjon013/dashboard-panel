@@ -25,8 +25,10 @@ function Form() {
         </div>
         <form onSubmit={handleSubmitBtn} className='w-full px-[32px] flex items-center justify-between border-b-[1px] border-b-[#DFE0EB]'>
             <input ref={InputRef} className='w-[80%] py-[20px] outline-none space-x-8 ' type="text" placeholder='Create new task' required/>
-            <button type='submit' className='w-[15%]  py-[20px] '>
-                <img className='ml-auto' src={plusIcon} alt="plus- img" width={20} height={20} />
+            <button type='submit' className='w-[15%]  py-[20px]  '>
+                <div className="w-[44px] mx-auto py-[10px] bg-[#F0F1F7] rounded-[8px] hover:scale-[1.3] duration-300">
+                    <img className='mx-auto' src={plusIcon} alt="plus- img" width={20} height={20} />
+                </div>
             </button>
         </form>
         

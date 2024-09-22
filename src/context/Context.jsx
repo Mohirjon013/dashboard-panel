@@ -19,6 +19,6 @@ export const TitleContext = ({children}) => {
         setTodos([...todos])
     }
     return (
-        <Context.Provider value={{path, setPath, addTodo,deleteTodo, todos}} >{children}</Context.Provider>
+        <Context.Provider value={{path, setPath, addTodo, deleteTodo, todos, setTodos}} >{children}</Context.Provider>
     )
 }
