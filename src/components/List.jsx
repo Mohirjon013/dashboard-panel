@@ -20,7 +20,7 @@ function List() {
                     {/* <div className={`cursor-pointer ${item.isComplated ? "scale-100" : "scale-0"}`}>
                         <img src={doneIcon} alt="done img"  width={20} height={20}/>
                     </div> */}
-                    <p className='py-[20px] font-semibold text-[14px] leading-[20px] text-[#252733]'>{item.title}</p>
+                    <p className={`py-[20px] font-semibold text-[14px] leading-[20px] text-[#252733] ${item.isComplated ? "line-through opacity-65" : ""}`}>{item.title}</p>
                 </div>
                 <button onClick={() => deleteTodo(item.id)} className='w-[78px] font-bold text-[15px] leading-[13px] bg-red-500 py-[8px] text-white rounded-[8px] hover:scale-[1.3] duration-300'>delete</button>
             </div>
