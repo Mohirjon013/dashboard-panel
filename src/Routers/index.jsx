@@ -6,7 +6,7 @@ import Header from '../components/Header'
 
 function Routers() {
   return (
-    <div className="w-[80%] p-[30px]">
+    <div className="w-[80%] p-[30px] overflow-y-auto h-[100vh]">
       <Header/>
       <Routes>
       <Route path='/' element={<Overview/>} />
