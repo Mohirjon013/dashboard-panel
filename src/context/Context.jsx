@@ -17,6 +17,7 @@ export const TitleContext = ({children}) => {
         const findArr = todos.findIndex(item => item.id == id)
         todos.splice(findArr,1)
         setTodos([...todos])
+        
     }
 
     function deleteUsers(id){

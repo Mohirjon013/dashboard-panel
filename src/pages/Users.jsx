@@ -32,15 +32,16 @@ function Users() {
 
   return (
     <div className=''>
+      
       <img src={card} alt="" />
 
       <div className="flex justify-between mb-[20px]">
        <div className="flex space-x-3">
-        <button onClick={handleSort} className='w-[100px] border-[1px] border-[#D0D5DD] bg-[#F5F5F9] flex items-center justify-center gap-[8px] py-[10px] rounded-md'>
+        <button onClick={handleSort} className='w-[100px] cursor-pointer border-[1px] border-[#D0D5DD] bg-[#F5F5F9] flex items-center justify-center gap-[8px] py-[10px] rounded-md'>
           <img src={filterIcon} alt="filter img" width={20} height={20} />
           <span>Filters</span>
         </button>
-        <button onClick={() => navigate("/users/add")} className='w-[118px] border-[1px] border-[#7784fa] bg-[#3751FF] flex items-center justify-center gap-[8px] py-[10px] rounded-md'>
+        <button onClick={() => navigate("/users/add")} className='w-[118px] cursor-pointer border-[1px] border-[#7784fa] bg-[#3751FF] flex items-center justify-center gap-[8px] py-[10px] rounded-md'>
           <img src={AddUsers} alt="filter img" width={20} height={20} />
           <span className='text-white'>Add Users</span>
         </button> 
@@ -53,7 +54,7 @@ function Users() {
         
       </div>
 
-      <table className='bg-[#F9FAFB] w-full'>
+      <table className='bg-[#F9FAFB] w-full shadow-md rounded-lg'>
         <thead className=''>
           <tr>
             <th className='p-2 border-b-[1px] border-[#EAECF0] text-[#8A92A6] text-[15px] font-semibold '>ID</th>
@@ -66,7 +67,7 @@ function Users() {
         </thead>
         <tbody>
           {filterUsers.map((item, index) => (
-            <tr key={index}>
+            <tr  key={index}>
               <td className='text-center p-2 text-[20px]'>{index + 1}</td>
               <td className='text-center p-2 text-[20px]'>{item.name}</td>
               <td className='text-center p-2 text-[20px]'>{item.surname}</td>
@@ -84,7 +85,20 @@ function Users() {
               </td>
             </tr>
           ))}
-            
+            <tr className='h-[5px]' >
+              <td className=' text-start pl-8 p-2 text-[20px] border-t-[1px] border-[#EAECF0]'>
+                <button className='w-[86px] py-[8px] text-[15px] text-[#344054] border-[1px] border-[#D0D5DD] bg-[#F5F5F9] rounded-lg'>Previous</button>
+              </td>
+              <td className='text-center  p-2 text-[20px]  border-t-[1px] border-[#EAECF0]'></td>
+              <td className='text-center p-2 text-[20px]  border-t-[1px] border-[#EAECF0]'>
+               <span className='text-[15px] font-semibold text-[#344054]'>Page 1 of 7</span>
+              </td>
+              <td className='text-center p-2 text-[20px]  border-t-[1px] border-[#EAECF0]'></td>
+              <td className='text-center p-2 text-[20px]  border-t-[1px] border-[#EAECF0]'></td>
+              <td className='text-end pr-8 p-2 text-[20px]  border-t-[1px] border-[#EAECF0]'>
+              <button className='w-[86px] py-[8px] text-[15px] text-[#344054] border-[1px] border-[#D0D5DD] bg-[#F5F5F9] rounded-lg'>Next</button>
+              </td>
+            </tr>
         </tbody>
       </table>
     </div>
