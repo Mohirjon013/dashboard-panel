@@ -1,6 +1,6 @@
 import React from 'react'
 import { Route, Routes } from 'react-router-dom'
-import { Overview,Tickets,Agents,Articles,Contacts,Ideas,Settings,Subscription,NotFoundPage } from '../pages'
+import { Overview,Tickets,Agents,Articles,Contacts,Ideas,Settings,Subscription,NotFoundPage, Users, AddUsers, SingleUser } from '../pages'
 import Header from '../components/Header'
 // import NotFoundPage from '../pages/NotFoundPage'
 
@@ -10,6 +10,9 @@ function Routers() {
       <Header/>
       <Routes>
       <Route path='/' element={<Overview/>} />
+      <Route path='/users' element={<Users/>} />
+      <Route path='/users/add' element={<AddUsers/>} />
+      <Route path='/users/:id' element={<SingleUser/>} />
       <Route path='/tickets' element={<Tickets/>} />
       <Route path='/agents' element={<Agents/>} />
       <Route path='/articles' element={<Articles/>} />

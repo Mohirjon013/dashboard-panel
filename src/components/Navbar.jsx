@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import siteLogo from "../assets/images/logo.svg"
 import NavbarLink from './NavbarLink'
-import { AgentsIcon, ArticlesIcon, ContactsIcon, IdeasTcon, OverviewIcon, SettingsIcon, SubscriptionIcon, TicketsIcon } from '../assets/images/icons'
+import { AgentsIcon, ArticlesIcon, ContactsIcon, IdeasTcon, OverviewIcon, SettingsIcon, SubscriptionIcon, TicketsIcon, UsersIcon } from '../assets/images/icons'
 
 function Navbar() {
     const navbarList = [
@@ -14,42 +14,48 @@ function Navbar() {
         },
         {
             id:2,
+            icon:<UsersIcon/>,
+            title:"Users",
+            path: "/users"
+        },
+        {
+            id:3,
             icon:<TicketsIcon/>,
             title:"Tickets",
             path: "/tickets"
         },
         {
-            id:3,
+            id:4,
             icon:<IdeasTcon/>,
             title:"Ideas",
             path: "/ideas"
         },
         {
-            id:4,
+            id:5,
             icon:<ContactsIcon/>,
             title:"Contacts",
             path: "/contacts"
         },
         {
-            id:5,
+            id:6,
             icon:<AgentsIcon/>,
             title:"Agents",
             path: "/agents"
         },
         {
-            id:6,
+            id:7,
             icon:<ArticlesIcon/>,
             title:"Articles",
             path: "/articles"
         },
         {
-            id:7,
+            id:8,
             icon:<SettingsIcon/>,
             title:"Settings",
             path: "/settings"
         },
         {
-            id:8,
+            id:9,
             icon:<SubscriptionIcon/>,
             title:"Subscription",
             path: "/subscription"
