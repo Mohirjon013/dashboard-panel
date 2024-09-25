@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext, useState } from 'react'
 import filterIcon from "../assets/images/filter.svg"
 import AddUsers from "../assets/images/add-user.svg"
 import MoreIcon from "../assets/images/more-add.svg"
@@ -10,14 +10,33 @@ import card from "../assets/images/card.png"
 
 function Users() {
   const navigate = useNavigate()
-  const {users, deleteUsers} = useContext(Context)
+  const { users, setUsers, deleteUsers} = useContext(Context)
+  const [filterUsers, setFilteredUsers] = useState(users)
+  
+  function handleSearch(e){
+    const inputValue = e.target.value.toLowerCase()
+    const userFilter = users.filter(item => item.name.toLowerCase().includes(inputValue) || item.age.toString().includes(inputValue))
+    // console.log(userFilter);
+    
+    setFilteredUsers(userFilter)  
+    
+  }
+
+
+  function handleSort(e){
+    const sotredUsers = [...users].sort((a, b) => a.name > b.name ? 1 : -1)
+    setFilteredUsers(sotredUsers)
+    // console.log(users);
+    
+  }
+
   return (
     <div className=''>
       <img src={card} alt="" />
 
       <div className="flex justify-between mb-[20px]">
        <div className="flex space-x-3">
-        <button className='w-[100px] border-[1px] border-[#D0D5DD] bg-[#F5F5F9] flex items-center justify-center gap-[8px] py-[10px] rounded-md'>
+        <button onClick={handleSort} className='w-[100px] border-[1px] border-[#D0D5DD] bg-[#F5F5F9] flex items-center justify-center gap-[8px] py-[10px] rounded-md'>
           <img src={filterIcon} alt="filter img" width={20} height={20} />
           <span>Filters</span>
         </button>
@@ -28,7 +47,7 @@ function Users() {
        </div>
         <label className='w-[320px] flex border-[1px] border-[#D0D5DD] bg-[#F5F5F9] rounded-md px-[14px]'>
           <img src={searchAdd} alt="search img" width={20} height={20} />
-          <input className='py-[10px] w-[80%] ml-[8px] bg-[#F5F5F9] outline-none' type="text" placeholder='Search' />
+          <input onInput={handleSearch} className='py-[10px] w-[80%] ml-[8px] bg-[#F5F5F9] outline-none' type="text" placeholder='Search' />
           
         </label>
         
@@ -46,8 +65,8 @@ function Users() {
           </tr>
         </thead>
         <tbody>
-          {users.map((item, index) => (
-            <tr >
+          {filterUsers.map((item, index) => (
+            <tr key={index}>
               <td className='text-center p-2 text-[20px]'>{index + 1}</td>
               <td className='text-center p-2 text-[20px]'>{item.name}</td>
               <td className='text-center p-2 text-[20px]'>{item.surname}</td>

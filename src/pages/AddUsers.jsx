@@ -38,22 +38,22 @@ function AddUsers() {
       
       <div className="flex justify-between mt-[50px]">
         <div className="w-[48%]  flex flex-col gap-[20px]">
-          <label class="flex flex-col">
+          <label className="flex flex-col">
             <span className='text-[15px] text-black'>First name :</span>
             <input className='bg-[#EEEEEE] placeholder:text-zinc-600 p-3 rounded-lg mt-2 outline-none focus:shadow  focus:shadow-gray-700' type="text" placeholder="Enter name " name="userName" autocomplete="off" required />
           </label>
-          <label class="flex flex-col">
+          <label className="flex flex-col">
             <span className='text-[15px] text-black'>User age :</span>
             <input className='bg-[#EEEEEE] placeholder:text-zinc-600 p-3 rounded-lg mt-2 outline-none focus:shadow  focus:shadow-gray-700' type="text" placeholder="Enter age " name="userAge" autocomplete="off" required />
           </label>
         </div>
 
         <div className="w-[48%]  flex flex-col gap-[20px]">
-          <label class="flex flex-col">
+          <label className="flex flex-col">
             <span className='text-[15px] text-black'>Last name :</span>
             <input className='bg-[#EEEEEE] placeholder:text-zinc-600 p-3 rounded-lg mt-2 outline-none focus:shadow  focus:shadow-gray-700' type="text" placeholder="Enter surname " name="userSurname" autocomplete="off" required />
           </label>
-          <label class="flex flex-col">
+          <label className="flex flex-col">
             <span className='text-[15px] text-black'>User address :</span>
             <input className='bg-[#EEEEEE] placeholder:text-zinc-600 p-3 rounded-lg mt-2 outline-none focus:shadow  focus:shadow-gray-700' type="text" placeholder="Enter address " name="userAddress" autocomplete="off" required />
           </label>
