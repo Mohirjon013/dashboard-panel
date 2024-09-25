@@ -11,7 +11,7 @@ function List() {
         setTodos([...todos])
     }
   return (
-    <div className="h-[160px] overflow-y-scroll">
+    <div className="h-[160px] overflow-y-scroll ">
         {todos.length ? todos.map((item, index) => (
             <div key={index} className='flex items-center justify-between border-b-[1px] border-b-[#DFE0EB] px-[32px]'>
                 <div className="flex items-center gap-4">
