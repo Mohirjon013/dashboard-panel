@@ -18,15 +18,15 @@ function AddUsers() {
       address:e.target.userAddress.value
 
     }
-    setUsers([...users, data])
     setTimeout(() => {
+      setUsers([...users, data])
       navigate("/users")
     }, 800);
   }
   return (
     <form onSubmit={handlesubmit}>
       <div className="flex items-center justify-between">
-        <button onClick={() => navigate(-1)} className='w-[100px] border-[1px] border-[#D0D5DD] bg-[#F5F5F9] flex items-center justify-center gap-[8px] py-[10px] rounded-md'>
+        <button type='button' onClick={() => navigate(-1)} className='w-[100px] border-[1px] border-[#D0D5DD] bg-[#F5F5F9] flex items-center justify-center gap-[8px] py-[10px] rounded-md'>
           <img src={filterIcon} alt="filter img" width={20} height={20} />
           <span>Back</span>
         </button>
