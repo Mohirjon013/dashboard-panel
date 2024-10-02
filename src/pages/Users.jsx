@@ -6,8 +6,7 @@ import deleteUser from "../assets/images/delete-add.svg"
 import searchAdd from "../assets/images/search-add.svg"
 import { Context } from '../context/Context'
 import { useNavigate } from 'react-router-dom'
-import card from "../assets/images/card.png"
-
+import UserImg from "../assets/images/user-img.svg"
 function Users() {
   const navigate = useNavigate()
   const { users, setUsers, deleteUsers} = useContext(Context)
@@ -33,7 +32,37 @@ function Users() {
   return (
     <div className=''>
       
-      <img src={card} alt="" />
+      {/* <img src={card} alt="" /> */}
+      <ul className="w-full flex justify-between mb-[52px]">
+        <li className="w-[23%] flex items-center gap-6 py-[24px] pl-[24px] bg-[#F9FAFB] shadow-md">
+          <img src={UserImg} alt="user img " width={68} height={68} />
+          <div className="">
+            <p className='mb-[8px] text-[#9199AC] text-[20px] font-semibold '>Total Sales</p>
+            <strong className=' text-[23px] font-semibold '>$560K</strong>
+          </div>
+        </li>
+        <li className="w-[23%] flex items-center gap-6 py-[24px] pl-[24px] bg-[#F9FAFB] shadow-md">
+          <img src={UserImg} alt="user img " width={68} height={68} />
+          <div className="">
+            <p className='mb-[8px] text-[#9199AC] text-[20px] font-semibold '>Total Sales</p>
+            <strong className=' text-[23px] font-semibold '>$560K</strong>
+          </div>
+        </li>
+        <li className="w-[23%] flex items-center gap-6 py-[24px] pl-[24px] bg-[#F9FAFB] shadow-md">
+          <img src={UserImg} alt="user img " width={68} height={68} />
+          <div className="">
+            <p className='mb-[8px] text-[#9199AC] text-[20px] font-semibold '>Total Sales</p>
+            <strong className=' text-[23px] font-semibold '>$560K</strong>
+          </div>
+        </li>
+        <li className="w-[23%] flex items-center gap-6 py-[24px] pl-[24px] bg-[#F9FAFB] shadow-md">
+          <img src={UserImg} alt="user img " width={68} height={68} />
+          <div className="">
+            <p className='mb-[8px] text-[#9199AC] text-[20px] font-semibold '>Total Sales</p>
+            <strong className=' text-[23px] font-semibold '>$560K</strong>
+          </div>
+        </li>
+      </ul>
 
       <div className="flex justify-between mb-[20px]">
        <div className="flex space-x-3">
